@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body onload="gerargrafico()">
+    <div id = "grafico"></div>
+    <p id="p1" style="display: none">{{chave.0}}</p>
+    <p id="p2"style="display: none">{{chave.1}}</p>
+    <p id="p3"style="display: none">{{chave.2}}</p>
+    <p id="p4"style="display: none">{{chave.3}}</p>
+    <p id="p5"style="display: none">{{chave.4}}</p>
+    <p id="p6"style="display: none">{{chave.5}}</p>
+    <p id="p7"style="display: none">{{chave.6}}</p>
+    <p id="p8"style="display: none">{{chave.7}}</p>
+    <p id="p9"style="display: none">{{chave.8}}</p>
+    <p id="p10"style="display: none">{{chave.9}}</p>
+    <p id="p11"style="display: none">{{chave.10}}</p>
+    <p id="p12"style="display: none">{{chave.11}}</p>
+    <script>
+        function gerargrafico(){
+        p1 = document.getElementById("p1").innerText;
+        p2 = document.getElementById("p2").innerText;
+        p3 = document.getElementById("p3").innerText;
+        p4 = document.getElementById("p4").innerText;
+        p5 = document.getElementById("p5").innerText;
+        p6 = document.getElementById("p6").innerText;
+        p7 = document.getElementById("p7").innerText;
+        p8 = document.getElementById("p8").innerText;
+        p9 = document.getElementById("p9").innerText;
+        p10 = document.getElementById("p10").innerText;
+        p11 = document.getElementById("p11").innerText;
+        p12 = document.getElementById("p12").innerText;
+        var graf1 = {
+            x: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro",],
+            y: [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12],
+            mode: "lines+markers",
+            type: "scatter",
+            name: "Acre"
+        };
+        var graf2 = {
+            x: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
+            y: [30,20,40,30,50,60,70,50,49,30,20, 40],
+            mode: "lines+markers",
+            type: "scatter",
+            name: "Amapá"
+        };
+        var data = [graf1,graf2];
+        Plotly.newPlot('grafico',data);
+    }
+    </script>
+</body>
+</html>

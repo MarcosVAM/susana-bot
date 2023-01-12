@@ -1,0 +1,43 @@
+ Morbidade Hospitalar do SUS - por local de residência - Brasil
+AIH aprovadas por Região/Unidade da Federação e Região
+Período:Jan/2022
+"Região/Unidade da Federação";"1 Região Norte";"2 Região Nordeste";"3 Região Sudeste";"4 Região Sul";"5 Região Centro-Oeste";"Total"
+"Região Norte";84904;-;-;-;-;84904
+".. Rondônia";9207;-;-;-;-;9207
+".. Acre";3874;-;-;-;-;3874
+".. Amazonas";16168;-;-;-;-;16168
+".. Roraima";3525;-;-;-;-;3525
+".. Pará";41786;-;-;-;-;41786
+".. Amapá";3501;-;-;-;-;3501
+".. Tocantins";6843;-;-;-;-;6843
+"Região Nordeste";-;265008;-;-;-;265008
+".. Maranhão";-;38407;-;-;-;38407
+".. Piauí";-;18249;-;-;-;18249
+".. Ceará";-;42154;-;-;-;42154
+".. Rio Grande do Norte";-;14292;-;-;-;14292
+".. Paraíba";-;15789;-;-;-;15789
+".. Pernambuco";-;47244;-;-;-;47244
+".. Alagoas";-;13027;-;-;-;13027
+".. Sergipe";-;8385;-;-;-;8385
+".. Bahia";-;67461;-;-;-;67461
+"Região Sudeste";-;-;386926;-;-;386926
+".. Minas Gerais";-;-;105529;-;-;105529
+".. Espírito Santo";-;-;21632;-;-;21632
+".. Rio de Janeiro";-;-;62423;-;-;62423
+".. São Paulo";-;-;197342;-;-;197342
+"Região Sul";-;-;-;167084;-;167084
+".. Paraná";-;-;-;68758;-;68758
+".. Santa Catarina";-;-;-;39433;-;39433
+".. Rio Grande do Sul";-;-;-;58893;-;58893
+"Região Centro-Oeste";-;-;-;-;80730;80730
+".. Mato Grosso do Sul";-;-;-;-;15111;15111
+".. Mato Grosso";-;-;-;-;16528;16528
+".. Goiás";-;-;-;-;32807;32807
+".. Distrito Federal";-;-;-;-;16284;16284
+"Total";84904;265008;386926;167084;80730;984652
+ Fonte: Ministério da Saúde - Sistema de Informações Hospitalares do SUS (SIH/SUS)
+ Notas:
+ 
+ Situação da base de dados nacional em 29/04/2016.
+ Dados de janeiro de 2015 até março de 2016 sujeitos a retificação.
+ 
