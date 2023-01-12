@@ -11,17 +11,7 @@ from django.conf.urls.static import static
 app_name = "Core"
 
 urlpatterns = [
-    #path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('grafico/', views.grafico, name="grafico"),
-    path('api-auth/', include('rest_framework.urls')),
-    #path("", views.uploadFile, name = "uploadFile"),
-    path("teste/<int:v1>/<int:v2>/<int:v3>/<int:v4>", views.teste, name = "teste"),
-    path("selecionar/", views.seleciona, name = "selecionar"),
 ]
 
-if settings.DEBUG: 
-    urlpatterns += static(
-        settings.MEDIA_URL, 
-        document_root = settings.MEDIA_ROOT
-    )
