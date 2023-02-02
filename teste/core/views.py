@@ -32,5 +32,6 @@ def grafico(request):
             vetor.append (dff)
             a  += 1
     pacote = {"chave": vetor}
-    print(pacote)
+    #print(pacote)
+    print(len(vetor))
     return render(request, 'grafico.html', pacote)
