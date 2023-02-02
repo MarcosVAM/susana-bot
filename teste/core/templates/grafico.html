@@ -9,47 +9,41 @@
 </head>
 <body onload="gerargrafico()">
     <div id = "grafico"></div>
-    <p id="p1" style="display: none">{{chave.0}}</p>
-    <p id="p2"style="display: none">{{chave.1}}</p>
-    <p id="p3"style="display: none">{{chave.2}}</p>
-    <p id="p4"style="display: none">{{chave.3}}</p>
-    <p id="p5"style="display: none">{{chave.4}}</p>
-    <p id="p6"style="display: none">{{chave.5}}</p>
-    <p id="p7"style="display: none">{{chave.6}}</p>
-    <p id="p8"style="display: none">{{chave.7}}</p>
-    <p id="p9"style="display: none">{{chave.8}}</p>
-    <p id="p10"style="display: none">{{chave.9}}</p>
-    <p id="p11"style="display: none">{{chave.10}}</p>
-    <p id="p12"style="display: none">{{chave.11}}</p>
+    
     <script>
-        function gerargrafico(){
-        p1 = document.getElementById("p1").innerText;
-        p2 = document.getElementById("p2").innerText;
-        p3 = document.getElementById("p3").innerText;
-        p4 = document.getElementById("p4").innerText;
-        p5 = document.getElementById("p5").innerText;
-        p6 = document.getElementById("p6").innerText;
-        p7 = document.getElementById("p7").innerText;
-        p8 = document.getElementById("p8").innerText;
-        p9 = document.getElementById("p9").innerText;
-        p10 = document.getElementById("p10").innerText;
-        p11 = document.getElementById("p11").innerText;
-        p12 = document.getElementById("p12").innerText;
-        var graf1 = {
-            x: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro",],
-            y: [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12],
-            mode: "lines+markers",
-            type: "scatter",
-            name: "Acre"
-        };
-        var graf2 = {
-            x: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
-            y: [30,20,40,30,50,60,70,50,49,30,20, 40],
-            mode: "lines+markers",
-            type: "scatter",
-            name: "Amapá"
-        };
-        var data = [graf1,graf2];
+    function gerargrafico(){
+        //console.log({{ chave.0 }});
+
+        var estados = ["Acre","Alagoas","Amazonas","Amapá","Bahia","Ceará","Distrito Federal","Espírito Santo","Goiás","Maranhão","Mato Grosso","Mato Grosso do Sul","Minas Gerais","Pará","Paraíba","Paraná","Pernambuco","Piauí","Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul","Rondônia","Roraíma","Santa Catarina","São Paulo","Sergipe","Tocantins",]
+        var meses_estados = [];
+        var aux = 0;
+        posicao = 0;
+        var graf = [];
+        for(i = 0; i<27;i++){
+        {%  for valor in chave %} 
+            meses_estados.push({{ valor }})
+            if (posicao % 11 == 0 && posicao != 0) {
+                graf[i] = {
+                    x: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro",],
+                    y: meses_estados,
+                    mode: "lines+markers",
+                    type: "scatter",
+                    name: estados[i]
+
+                }
+                meses_estados = [];
+            }
+            
+
+            posicao++;
+
+
+        {% endfor %}
+        }
+       // var data = [graf];
+        // var data = [graf1];
+        var data = [graf[0],graf[1],graf[2],graf[3],graf[4],graf[5],graf[6],graf[7],graf[8],graf[9],graf[10],graf[11],graf[12],graf[13],graf[14],graf[15],graf[16],graf[17],graf[18],graf[19],graf[20],graf[21],graf[22],graf[23],graf[24],graf[25],graf[26]];
+
         Plotly.newPlot('grafico',data);
     }
     </script>
